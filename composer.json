@@ -1,0 +1,32 @@
+{
+    "name": "componenta/profiler",
+    "description": "Request and service profiling for Componenta framework — dev-only dependency",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "profiler",
+        "dev",
+        "timing",
+        "waterfall",
+        "server-timing",
+        "psr-15"
+    ],
+    "require": {
+        "php": "^8.4",
+        "componenta/app": "^1.0",
+        "componenta/config": "^1.0",
+        "componenta/path-resolver": "^1.0",
+        "componenta/pipeline": "^1.0",
+        "psr/container": "^2.0",
+        "psr/http-message": "^2.0",
+        "psr/http-factory": "^1.0",
+        "psr/http-server-middleware": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Componenta\\Profiler\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
