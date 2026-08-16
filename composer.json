@@ -13,8 +13,8 @@
     ],
     "require": {
         "php": "^8.4",
-        "componenta/app": "^1.0",
-        "componenta/config": "^1.0",
+        "componenta/app": "^1.0 || ^2.0 || ^3.0.2",
+        "componenta/config": "^1.0 || ^2.0.2",
         "componenta/path-resolver": "^1.0",
         "componenta/pipeline": "^1.0",
         "psr/container": "^2.0",
@@ -22,10 +22,26 @@
         "psr/http-factory": "^1.0",
         "psr/http-server-middleware": "^1.0"
     },
+    "require-dev": {
+        "componenta/di": "^4.0.2",
+        "nyholm/psr7": "^1.8",
+        "phpunit/phpunit": "^12.0"
+    },
     "autoload": {
         "psr-4": {
             "Componenta\\Profiler\\": "src/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Componenta\\Profiler\\Tests\\": "tests/"
         }
+    },
+    "scripts": {
+        "test": "@php vendor/bin/phpunit tests"
     },
     "minimum-stability": "stable",
     "prefer-stable": true
